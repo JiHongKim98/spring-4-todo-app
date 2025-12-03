@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: local
+
+logging:
+  level:
+    org.hibernate.orm.connections.pooling: WARN
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings

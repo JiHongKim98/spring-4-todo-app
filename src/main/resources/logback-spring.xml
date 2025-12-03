@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration>
+    <springProfile name="local, test">
+        <include resource="appender/base-appender.xml"/>
+
+        <root level="info">
+            <appender-ref ref="BASE_APPENDER"/>
+        </root>
+    </springProfile>
+</configuration>
