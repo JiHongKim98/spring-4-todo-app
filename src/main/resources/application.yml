@@ -2,6 +2,17 @@ spring:
   profiles:
     active: local
 
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/todo-app
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: ${AUTO_DDL:update}
+    open-in-view: false
+
 logging:
   level:
     org.hibernate.orm.connections.pooling: WARN
