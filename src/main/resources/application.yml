@@ -13,6 +13,9 @@ spring:
       ddl-auto: ${AUTO_DDL:update}
     open-in-view: false
 
+  api-version:
+    support-versions: [ "v1", "v2", "v3" ]
+
 logging:
   level:
     org.hibernate.orm.connections.pooling: WARN

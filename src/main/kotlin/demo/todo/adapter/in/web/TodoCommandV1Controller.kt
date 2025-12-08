@@ -17,8 +17,12 @@ import org.springframework.web.bind.annotation.RequestHeader
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
+/**
+ * version 설정에서 '1+' 의 의미는 supportVersion 으로 등록된 범위 내에서 1 버전 이후의 모든 버전을 의미
+ * @see demo.todo.common.config.AppVersionConfig.configureApiVersioning()
+ */
 @RestController
-@RequestMapping("/api/todos", version = "1")
+@RequestMapping("/api/todos", version = "1+")
 internal class TodoCommandV1Controller(
     private val createTodoUseCase: CreateTodoUseCase,
     private val updateTodoUseCase: UpdateTodoUseCase,
